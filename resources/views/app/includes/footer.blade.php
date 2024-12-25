@@ -34,5 +34,5 @@
             </svg>
         </a>
     </div>
-    <p class="text-sm font-light text-gray-400">Made with ❤️ by Syahreza Satria 2024</p>
+    <p class="text-sm font-light text-gray-400">Made with ❤️ by Syahreza Satria Alfath 2024</p>
 </footer>

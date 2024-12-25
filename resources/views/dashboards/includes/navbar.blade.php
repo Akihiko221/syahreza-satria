@@ -10,18 +10,17 @@
                     <div class="flex items-baseline ml-10 space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <a href="{{ route('dashboard') }}"
-                            class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md"
+                            class="px-3 py-2 text-sm font-medium text-gray-300 transition duration-300 rounded-md hover:bg-gray-700 hover:text-white"
                             aria-current="page">Dashboard</a>
                         <a href="{{ route('dashboard.gear') }}"
-                            class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">Gears</a>
+                            class="px-3 py-2 text-sm font-medium text-gray-300 transition duration-300 rounded-md hover:bg-gray-700 hover:text-white">Gears</a>
                         <a href="{{ route('dashboard.project') }}"
-                            class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">Projects</a>
+                            class="px-3 py-2 text-sm font-medium text-gray-300 transition duration-300 rounded-md hover:bg-gray-700 hover:text-white">Projects</a>
                     </div>
                 </div>
             </div>
             <div class="hidden md:block">
                 <div class="flex items-center ml-4 md:ml-6">
-
                     <!-- Profile dropdown -->
                     <div class="relative ml-3">
                         <div>
@@ -87,12 +86,12 @@
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="{{ route('dashboard') }}"
-                class="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md"
+                class="block px-3 py-2 text-base font-medium text-gray-300 transition duration-300 rounded-md hover:bg-gray-700 hover:text-white"
                 aria-current="page">Dashboard</a>
             <a href="{{ route('dashboard.gear') }}"
-                class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">Gear</a>
+                class="block px-3 py-2 text-base font-medium text-gray-300 transition duration-300 rounded-md hover:bg-gray-700 hover:text-white">Gear</a>
             <a href="{{ route('dashboard.project') }}"
-                class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">Projects</a>
+                class="block px-3 py-2 text-base font-medium text-gray-300 transition duration-300 rounded-md hover:bg-gray-700 hover:text-white">Projects</a>
         </div>
         <div class="pt-4 pb-3 border-t border-gray-700">
             <div class="flex items-center px-5">

@@ -14,7 +14,7 @@
         rel="stylesheet">
 </head>
 
-<body class="max-w-lg pt-8 pb-16 mx-auto font-primary">
+<body class="max-w-lg px-4 pt-8 pb-16 mx-auto font-primary">
     {{-- Profile --}}
     @include('app.includes.profile')
 
