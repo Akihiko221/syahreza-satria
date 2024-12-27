@@ -57,7 +57,7 @@
                             <label for="photo" class="block font-medium text-gray-900 text-sm/6">Photo</label>
                             <div class="flex items-center mt-2 gap-x-3">
                                 @if ($project->image)
-                                    <img src="{{ asset('storage/' . $project->image) }}"
+                                    <img src="{{ asset('images/project/' . $project->image) }}"
                                         alt="{{ $project->brand }} {{ $project->name }}" width="200"
                                         class="mt-2 rounded-xl">
                                 @else

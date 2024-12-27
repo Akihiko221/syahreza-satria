@@ -48,8 +48,11 @@ class DashboardController extends Controller
         $gear->link = $request->link;
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('gears', 'public');
-            $gear->image = $imagePath;
+            $file = $request->file('image');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('images/gear'), $filename);
+
+            $gear->image = $filename;
         }
 
         $gear->save();
@@ -77,12 +80,17 @@ class DashboardController extends Controller
         $gear->name = $request->name;
         $gear->description = $request->description;
         $gear->link = $request->link;
+
         if ($request->hasFile('image')) {
-            if ($gear->image) {
-                Storage::disk('public')->delete($gear->image);
+            if ($gear->image && file_exists(public_path('images/gear/' . $gear->image))) {
+                unlink(public_path('images/gear/' . $gear->image));
             }
-            $imagePath = $request->file('image')->store('gear', 'public');
-            $gear->image = $imagePath;
+
+            $file = $request->file('image');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('images/gear'), $fileName);
+
+            $gear->image = $fileName;
         }
 
         $gear->save();
@@ -130,8 +138,11 @@ class DashboardController extends Controller
         $project->link = $request->link;
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('project', 'public');
-            $project->image = $imagePath;
+            $file = $request->file('image');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('images/project'), $filename);
+
+            $project->image = $filename;
         }
 
         $project->save();
@@ -159,12 +170,17 @@ class DashboardController extends Controller
         $project->name = $request->name;
         $project->description = $request->description;
         $project->link = $request->link;
+
         if ($request->hasFile('image')) {
-            if ($project->image) {
-                Storage::disk('public')->delete($project->image);
+            if ($project->image && file_exists(public_path('images/project/' . $project->image))) {
+                unlink(public_path('images/project/' . $project->image));
             }
-            $imagePath = $request->file('image')->store('project', 'public');
-            $project->image = $imagePath;
+
+            $file = $request->file('image');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('images/project'), $fileName);
+
+            $project->image = $fileName;
         }
 
         $project->save();

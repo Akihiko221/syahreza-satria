@@ -12,9 +12,8 @@
             @foreach ($gears as $gear)
                 <div class="col-span-1">
                     <div class="p-4 transition-transform transform bg-white shadow-md rounded-xl min-h-[300px]">
-                        <img src="{{ $gear->image ? asset('storage/' . $gear->image) : asset('images/default-gear.png') }}"
-                            alt="{{ $gear->brand }} {{ $gear->name }}" class="object-cover mb-4 rounded-xl aspect-square"
-                            width="250" height="250">
+                        <img src="{{ asset('images/gear/' . $gear->image) }}" alt="{{ $gear->brand }} {{ $gear->name }}"
+                            class="object-cover mb-4 rounded-xl aspect-square" width="250" height="250">
                         <h2 class="mb-0 text-sm font-light text-gray-500">{{ $gear->brand }}</h2>
                         <h2 class="mb-2 text-lg font-bold">{{ $gear->name }}</h2>
                         <p class="text-sm font-light text-gray-500 truncate">{{ $gear->description }}</p>

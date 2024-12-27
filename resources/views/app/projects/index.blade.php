@@ -11,7 +11,7 @@
         <div class="grid gap-5 md:grid-cols-2 sm:grid-cols-1">
             @foreach ($projects as $project)
                 <div class="mb-5">
-                    <img src="{{ $project->image }}" alt="{{ $project->name }}"
+                    <img src="{{ asset('images/project/' . $project->image) }}" alt="{{ $project->name }}"
                         class="object-cover w-full mb-4 rounded-lg aspect-video">
                     <p class="mb-2 text-xs text-gray-500">{{ $project->type }}</p>
                     <h3 class="mb-4 text-xl font-semibold">{{ $project->name }}</h3>

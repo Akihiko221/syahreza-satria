@@ -11,7 +11,7 @@
         <div class="grid grid-cols-2 gap-5">
             @foreach ($gears as $gear)
                 <div class="mb-5">
-                    <img src="{{ $gear->image }}" alt="{{ $gear->brand }} {{ $gear->name }}"
+                    <img src="{{ asset('images/gear/' . $gear->image) }}" alt="{{ $gear->brand }} {{ $gear->name }}"
                         class="object-cover w-full mb-2 rounded-lg aspect-square">
                     <p class="mb-0 text-sm text-gray-500">{{ $gear->brand }}</p>
                     <h3 class="mb-2 text-lg font-semibold">{{ $gear->name }}</h3>

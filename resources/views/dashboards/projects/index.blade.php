@@ -11,8 +11,8 @@
         <div class="grid grid-cols-1 gap-6 text-start md:grid-cols-2 lg:grid-cols-3">
             @foreach ($projects as $project)
                 <div class="p-4 transition-transform transform bg-white shadow-lg rounded-xl">
-                    <img src="{{ $project->image ? asset('storage/' . $project->image) : asset('images/default-project.png') }}"
-                        alt="{{ $project->name }}" class="object-cover mb-4 rounded-lg">
+                    <img src="{{ asset('images/project/' . $project->image) }}" alt="{{ $project->name }}"
+                        class="object-cover mb-4 rounded-lg">
                     <h2 class="text-sm font-light text-gray-600">{{ $project->type }}</h2>
                     <h2 class="mb-2 text-xl font-bold">{{ $project->name }}</h2>
                     <p class="text-sm font-light text-gray-500">{{ $project->description }}</p>

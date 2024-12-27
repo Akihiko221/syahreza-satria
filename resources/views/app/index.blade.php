@@ -16,8 +16,8 @@
         <div class="grid grid-cols-2 gap-5">
             @foreach ($projects as $project)
                 <a href="{{ route('project') }}" class="text-sm">
-                    <img src="{{ $project->image }}" alt="{{ $project->name }}" class="object-cover rounded-xl aspect-video"
-                        height="180" width="250">
+                    <img src="{{ asset('images/project/' . $project->image) }}" alt="{{ $project->name }}"
+                        class="object-cover rounded-xl aspect-video" height="180" width="250">
                     <p class="mt-5 mb-1 text-xs font-medium text-gray-500">{{ $project->type }}</p>
                     <h3 class="mb-1 text-lg font-semibold">{{ $project->name }}</h3>
                     <p class="text-xs font-light text-gray-500">{{ $project->description }}</p>
